@@ -13,12 +13,13 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    
-
+   
   }
   .navbar h1{
     padding-left: 30px;
+   
   }
+  
   .navbar ul{
     display: flex;
     list-style: none;
@@ -27,9 +28,7 @@
     padding-right: 50px;
     
   }
-  .ab{
-    color: #ffb400;
-  }
+  
   .navbar a{
     text-decoration: none;
     color: #fff;
@@ -64,6 +63,13 @@
     color: #fff;
     font-size: 15px;
     border: 0.5px solid #fff;
+  }
+  .download{
+    width: 200px;
+  }
+  .remove-anchorStyle{
+    text-decoration: none;
+    color: #fff;
   }
   .btn:hover{
     background-color: #ffb400;
@@ -188,3 +194,147 @@
    html{
     scroll-behavior: smooth;
    }
+   
+  
+   /* Responsive CSS */
+
+/* Screen width 768px tak ke liye */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .navbar li {
+    padding: 10px 0;
+  }
+
+  .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-hero {
+    padding: 0;
+  }
+
+  .kaif-image {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .about-address {
+    margin: 0;
+    text-align: center;
+  }
+
+  .skills-section {
+    grid-template-columns: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .progress-bar {
+    width: 80%;
+  }
+
+  .project {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project img {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .inputText,
+  .msg,
+  .submitBtn {
+    width: 90%;
+  }
+}
+
+/* Screen width 480px tak ke liye */
+@media screen and (max-width: 480px) {
+  .navbar h1 {
+    font-size: 20px;
+  }
+
+  .navbar ul {
+    padding: 5px 0;
+  }
+
+  .btn {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .kaif-image {
+    width: 70%;
+  }
+
+  .skill span {
+    left: auto;
+    bottom: 5px;
+  }
+
+  .progress-bar {
+    width: 90%;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .msg {
+    height: 100px;
+    padding-bottom: 70px;
+  }
+}
+
+/* Hamburger Styles */
+
+
+.nav-menu.show {
+  display: flex;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .navbar ul{
+    display: none;
+  }
+}
