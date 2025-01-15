@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   body {
     font-family: Arial, sans-serif;
     background-color: #000;
     color: #fff;
+    
   }
   .navbar{
     display: flex;
@@ -56,16 +58,18 @@
     border-radius: 50%;
   }
   .btn{
-    width: 100px;
-    height: 40px;
+     width: 100px; 
+     height: 40px; 
     border-radius: 25px;
     background-color: #000;
     color: #fff;
     font-size: 15px;
     border: 0.5px solid #fff;
   }
+ 
   .download{
     width: 200px;
+    
   }
   .remove-anchorStyle{
     text-decoration: none;
@@ -74,6 +78,14 @@
   .btn:hover{
     background-color: #ffb400;
     color: #000;
+  }
+  @media screen and (max-width: 480px) {
+     
+    .download {
+      margin-right: 5px;
+      transform: translateY(8px);
+      width: 100%;
+    }
   }
   .kaif_image2{
     width: 300px;
@@ -96,42 +108,70 @@
   color: gray;
   line-height: 40px;
 }
- .progress-bar{
-  width: 30%;
-  background-color: #333;
-  border-radius: 5px;
-  overflow: hidden;
-  height: 10px;
-}
-.progress{
-  height: 100%;
-  background-color: #f90;
-}
+ 
 
 .skill-headeer{
   text-align: center;
-  padding-top: 50px;
+  
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #ffb400;
 }
 
-   .skills-section{
+.skills-section{
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 100px 100px 100px;
-    margin-left: 300px;
-    margin-top: 100px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    padding: 20px;
    }
-   .skill span{
-    position: relative;
-    left: 195px;
-    bottom: 10px;
-   }
-   /* .my-resume{
+   
+   .skill {
     text-align: center;
-   }
-   .resume-img{
-    height: 500px;
-    margin-top: 30px;
-   } */
+    margin: 10px 0;
+   
+  }
+  
+  .skill h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    position: relative;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #ffb400;
+    
+  }
+  
+  .skill span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #ccc;
+    
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .skills-section {
+      grid-template-columns: 1fr;
+    }
+  
+    .progress-bar {
+      width: 90%;
+    }
+  }
+   
     .heading-center{
       text-align: center;
       margin-top: 20px;
@@ -150,21 +190,28 @@
     color: #fff;
    }
    .logo{
-    height: 50px;
+    height: 80px;
     border: 5px solid #ffb400;
     border-radius: 50%;
     margin-top: 20px;
     margin-right: 10px;
    }
-   .contact{
+   
+   .logoDeign{
     display: flex;
     justify-content: space-between;
-    margin-top: 120px;
+    margin-top: 60px;
+   }
+   .logoName-design{
+    text-align: center;
+    color: #ffb400;
+    padding-right: 5px;
    }
    .forCenter{
     text-align: center;
     color: #ffb400;
     font-size: 30px;
+    margin-top: 100px;
    }
    .para{
     padding-top: 12px;
@@ -191,14 +238,14 @@
     border-radius: 25px;
     font-size: 16px;
    }
-   html{
+   /* html{
     scroll-behavior: smooth;
-   }
+   } */
    
   
    /* Responsive CSS */
 
-/* Screen width 768px tak ke liye */
+
 @media screen and (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
@@ -256,11 +303,7 @@
     margin-bottom: 20px;
   }
 
-  .contact {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+  
 
   .inputText,
   .msg,
@@ -337,4 +380,13 @@
   .navbar ul{
     display: none;
   }
+}
+footer{
+ margin-top: 50px;
+ height: 60px;
+ background-color: #fff;
+ color: #000;
+display: flex;
+ justify-content: center;
+ align-items: center;
 }
