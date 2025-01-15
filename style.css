@@ -84,22 +84,24 @@
     .download {
       margin-right: 5px;
       transform: translateY(8px);
-      width: 100%;
+      
     }
   }
   .kaif_image2{
     width: 300px;
-    
   }
   .about-me{
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     margin-top: 50px;
     border: 1px solid #ffb400;
+    
   }
+
   .about-address{
     margin-left: 50px;
   }
+  
   .Address{
     margin-top: 50px;
   }
